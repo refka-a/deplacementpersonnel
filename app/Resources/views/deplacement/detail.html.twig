@@ -1,0 +1,62 @@
+<style>
+
+
+th, td {
+  padding: 10px;
+}
+th {
+  text-align: right;
+}
+</style>
+
+<center><h1>Ajouter un déplacement</h1>
+
+{{ form_start(form) }}
+
+<table>
+  <tbody>
+    <tr>
+      <th>Nom :</th>
+      <td>{{ form_widget(form.nom) }}</td>
+    </tr>
+    <tr>
+      <th>Prénom :</th>
+      <td>{{ form_widget(form.prenom) }}</td>
+    </tr>
+    <tr>
+      <th>Email :</th>
+      <td>{{ form_widget(form.email) }}</td>
+    </tr>
+    <tr>
+      <th>Ville :</th>
+      <td>{{ form_widget(form.ville) }}</td>
+    </tr>
+    <tr>
+      <th>Date de départ :</th>
+      <td>{{ form_widget(form.datedepart) }}</td>
+    </tr>
+    <tr>
+      <th>Heure de départ :</th>
+      <td>{{ form_widget(form.timedepart) }}</td>
+    </tr>
+    </tr>
+    <tr>
+      <th>Date de retour :</th>
+      <td>{{ form_widget(form.dateretour) }}</td>
+    </tr>
+    <tr>
+      <th>Heure de retour :</th>
+      <td>{{ form_widget(form.timeretour) }}</td>
+    </tr>
+    <tr>
+      <th>Moyen :</th>
+      <td>{{ form_widget(form.moyen) }}</td>
+    </tr>
+    <tr>
+      <th>{{ form_widget(form.save) }}</th>
+      <td>{{ form_widget(form.reset) }} </td>
+    </tr>
+  </tbody>
+</table>
+
+{{ form_end(form) }}</center>

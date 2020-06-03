@@ -1,0 +1,42 @@
+
+<style>
+th, td {
+  padding: 10px;
+}
+th {
+  text-align: left;
+}
+</style>
+
+<center><h1>Liste de déplacements</h1>
+{% if deplacements is not empty %}
+<table border="1">
+<thead>
+    <tr>
+      <th>Nom et prénom</th>
+      <th>Date de départ</th>
+      <th>Date de retour</th>
+      <th>Moyen</th>
+      <th></th>
+    </tr>
+</thead>
+  <tbody>
+  {% for deplacement in deplacements %}
+  <tr>
+    <td>{{ deplacement.nom }}</td>
+    <td>{{ deplacement.email }}</td>
+    <td>{{ deplacement.ville }}</td>
+    <td>{{ deplacement.moyen }}</td>
+    <td>
+    <td><a href="update-deplacement/{{ deplacement.id }}">Update</a></td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+  <p>No article found.</p>
+{% endif %}
+
+<br/>
+<a href="/detail-deplacement"><Input name="nov" type="submit" value="Nouveau"/></a>
+</center>
